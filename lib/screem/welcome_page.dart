@@ -120,12 +120,48 @@ class _WelcomePageState extends State<WelcomePage> {
                     color: Color.fromARGB(255, 236, 236, 236),
                     borderRadius: BorderRadius.circular(30)),
                     child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                          Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-
+                             Padding(
+                              padding: const EdgeInsets.only(left: 10),
+                               child: Text("Speaker\n Halo2", 
+                               style: TextStyle(
+                                fontSize: 16,
+                                fontWeight: FontWeight.bold
+                                
+                               ),
+                               ),
+                             ),
+                                  Padding(
+                                    padding: const EdgeInsets.only(left: 10),
+                                    child: CupertinoSwitch(
+                                                                activeColor: Color.fromARGB(255, 13, 141, 245),
+                                                                trackColor: CupertinoColors.inactiveGray,
+                                                                thumbColor: CupertinoColors.white,
+                                                                value: _showBlueBox,
+                                                                onChanged: (value) {
+                                                                  setState(() {
+                                                                    _showBlueBox = value;
+                                                                  });
+                                                                },
+                                                              ),
+                                  ),
                           ],
-                         )  
+                         )  ,
+                            Container(
+                            height: MediaQuery.of(context).size.height / 7,
+                            width: 30.w,
+                            decoration: BoxDecoration(
+                                image: DecorationImage(
+                                  image: AssetImage("assets/images/img2.png"),
+                                  fit: BoxFit.fitWidth,
+                                ),
+                                borderRadius: BorderRadius.only(
+                                    bottomRight: Radius.circular(30))),
+                          ),
                       ],
                     ),
                     ),
@@ -187,7 +223,7 @@ class _WelcomePageState extends State<WelcomePage> {
                           ),
                           Container(
                             height: MediaQuery.of(context).size.height / 5.5,
-                            width: 29.w,
+                            width: 30.w,
                             decoration: BoxDecoration(
                                 image: DecorationImage(
                                   image: AssetImage("assets/images/img2.png"),
@@ -256,7 +292,7 @@ class _WelcomePageState extends State<WelcomePage> {
                           Container(
                            
                             height: MediaQuery.of(context).size.height / 5.5,
-                            width: 29.w,
+                            width: 30.w,
                             decoration: BoxDecoration(
                                 image: DecorationImage(
                                     image: AssetImage("assets/images/img2.png"),

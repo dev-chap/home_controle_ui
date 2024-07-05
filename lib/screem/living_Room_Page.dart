@@ -79,7 +79,7 @@ class _LivingRoomPageState extends State<LivingRoomPage> {
                             color: Colors.white,
                             borderRadius: BorderRadius.circular(30)
                           ),
-                          child: Image.asset("assets/images/ubl.png")
+                          child: Image.asset("assets/images/img2.png")
                         ),
                          Padding(
                            padding: const EdgeInsets.only(left: 7),
